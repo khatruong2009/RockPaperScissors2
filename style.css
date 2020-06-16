@@ -1,9 +1,21 @@
+.header {
+ display: flex;
+ justify-content: space-evenly;
+}
+
 .buttons {
  display: flex;
  justify-content: space-evenly;
- margin-top: 15%;
+ margin-top: 5%;
 }
 
 .buttons input {
  width: 200px;
+ box-sizing: border-box;
+ transition: transform .3s;
+}
+
+.buttons input:hover {
+ border: black 5px solid;
+ transform: scale(1.1);
 }

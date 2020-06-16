@@ -3,11 +3,26 @@ let computerSelection = computerPlay();
 let playerSelection; 
 let myScore = 0;
 let compScore = 0;
+let rock = document.querySelector("#rock");
+let paper = document.querySelector("#paper");
+let scissors = document.querySelector("#scissors");
+
+rock.addEventListener("click", () => {
+ rps("r");
+});
+
+paper.addEventListener("click", () => {
+ rps("p");
+});
+
+scissors.addEventListener("click", () => {
+ rps("s");
+});
 
 //combines below functions and loops it while keeping score
 function game() {
  while (myScore < 3 && compScore < 3) {
- console.log(rps(computerSelection, playerSelection));
+ console.log(rps(playerSelection));
  console.log("Your score is: " + myScore, "The computer's score is: " +  compScore);
  computerSelection = computerPlay();
  }
@@ -34,8 +49,8 @@ function computerPlay() {
 }
 
 //function to play rock paper scissors
-function rps(computerSelection, playerSelection) {
- playerSelection = prompt("Would you like to pick Rock, Paper, or Scissors? \n (Type in r, p, or s.)");
+function rps(playerSelection) {
+ computerSelection = computerPlay();
  console.log("The computer chose " + computerSelection);
  if (computerSelection == "rock" && playerSelection == "r") {
   return "It's a tie, try again.";

@@ -6,7 +6,6 @@
 .buttons {
  display: flex;
  justify-content: space-evenly;
- margin-top: 5%;
 }
 
 .buttons input {
@@ -17,5 +16,50 @@
 
 .buttons input:hover {
  border: black 5px solid;
+ transform: scale(1.1);
+}
+
+.result h2 {
+ text-align: center;
+ font-size: 45px;
+}
+
+.result p {
+ text-align: center;
+ font-size: 25px;
+}
+
+#result {
+ font-weight: bold;
+}
+
+.message {
+ font-weight: bold;
+ border-top: black 3px solid;
+ padding-top: 15px;
+}
+
+#img {
+ max-width: 100px;
+}
+
+.compImage {
+ display: flex;
+ justify-content: center;
+ border-bottom: solid black 3px;
+ padding-bottom: 20px;
+}
+
+.reset {
+ text-align: center;
+}
+
+#reset {
+ font-size: 35px;
+ background-color: red;
+ transition: transform .3s;
+}
+
+#reset:hover {
  transform: scale(1.1);
 }

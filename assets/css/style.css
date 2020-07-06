@@ -1,22 +1,44 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .header {
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
- justify-content: space-evenly;
+ -webkit-box-pack: space-evenly;
+     -ms-flex-pack: space-evenly;
+         justify-content: space-evenly;
 }
 
 .buttons {
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
- justify-content: space-evenly;
+ -webkit-box-pack: space-evenly;
+     -ms-flex-pack: space-evenly;
+         justify-content: space-evenly;
 }
 
 .buttons input {
  width: 200px;
- box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+         box-sizing: border-box;
+ -webkit-transition: -webkit-transform .3s;
+ transition: -webkit-transform .3s;
+ -o-transition: transform .3s;
  transition: transform .3s;
+ transition: transform .3s, -webkit-transform .3s;
 }
 
 .buttons input:hover {
  border: black 5px solid;
- transform: scale(1.1);
+ -webkit-transform: scale(1.1);
+     -ms-transform: scale(1.1);
+         transform: scale(1.1);
 }
 
 .result h2 {
@@ -44,8 +66,12 @@
 }
 
 .compImage {
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
- justify-content: center;
+ -webkit-box-pack: center;
+     -ms-flex-pack: center;
+         justify-content: center;
  border-bottom: solid black 3px;
  padding-bottom: 20px;
 }
@@ -57,9 +83,15 @@
 #reset {
  font-size: 35px;
  background-color: red;
+ -webkit-transition: -webkit-transform .3s;
+ transition: -webkit-transform .3s;
+ -o-transition: transform .3s;
  transition: transform .3s;
+ transition: transform .3s, -webkit-transform .3s;
 }
 
 #reset:hover {
- transform: scale(1.1);
+ -webkit-transform: scale(1.1);
+     -ms-transform: scale(1.1);
+         transform: scale(1.1);
 }

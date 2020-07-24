@@ -11,7 +11,9 @@ let result = document.querySelector("#result");
 let pScore = document.querySelector("#pScore");
 let cScore = document.querySelector("#cScore");
 let cChoice = document.querySelector("#cChoice");
-let pChoice = document.querySelector("#pChoice")
+let pChoice = document.querySelector("#pChoice");
+let pImage = document.querySelector("#pImage");
+let cImage = document.querySelector("#cImage");
 let message = document.querySelector("#message");
 let img = document.querySelector("#img");
 let compImage = document.querySelector("#compImage");
@@ -67,7 +69,7 @@ function rps(playerSelection) {
  computerSelection = computerPlay();
  cChoice.textContent = ("The computer chose " + computerSelection + ".");
  pChoice.textContent = ("The player chose " + playerSelection + ".");
-result.classList.add("result-border")
+result.classList.add("result-border");
  if (computerSelection == "rock" && playerSelection == "rock") {
   message.classList.add("message");
   compImage.classList.add("compImage");

@@ -50,6 +50,11 @@ body {
     font-size: 25px;
 }
 
+.choice-image {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .choice-container {
     display: flex;
     justify-content: space-evenly;

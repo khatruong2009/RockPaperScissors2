@@ -11,6 +11,7 @@ let result = document.querySelector("#result");
 let pScore = document.querySelector("#pScore");
 let cScore = document.querySelector("#cScore");
 let cChoice = document.querySelector("#cChoice");
+let pChoice = document.querySelector("#pChoice")
 let message = document.querySelector("#message");
 let img = document.querySelector("#img");
 let compImage = document.querySelector("#compImage");
@@ -21,22 +22,28 @@ let reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
  myScore = 0;
  compScore = 0;
+ cChoice.textContent = "";
+ pChoice.textContent = "";
  pScore.textContent = ("Your Score: " + myScore);
  cScore.textContent = ("Computer Score: " + compScore);
  message.textContent = "";
+ message.classList.remove("green");
+ message.classList.add("red");
+ result.textContent = "";
+ result.classList.remove("result-border");
 })
 
 //functions to start the game when the user clicks an image
 rock.addEventListener("click", () => {
- rps("r");
+ rps("rock");
 });
 
 paper.addEventListener("click", () => {
- rps("p");
+ rps("paper");
 });
 
 scissors.addEventListener("click", () => {
- rps("s");
+ rps("scissors");
 });
 
 //function to get a random number
@@ -59,47 +66,49 @@ function computerPlay() {
 function rps(playerSelection) {
  computerSelection = computerPlay();
  cChoice.textContent = ("The computer chose " + computerSelection + ".");
- if (computerSelection == "rock" && playerSelection == "r") {
+ pChoice.textContent = ("The player chose " + playerSelection + ".");
+result.classList.add("result-border")
+ if (computerSelection == "rock" && playerSelection == "rock") {
   message.classList.add("message");
   compImage.classList.add("compImage");
   img.src = "rock.png";
   result.textContent = "It's a tie, try again.";
- } else if (computerSelection == "rock" && playerSelection == "p") {
+ } else if (computerSelection == "rock" && playerSelection == "paper") {
   message.classList.add("message");
   compImage.classList.add("compImage");
   myScore += 1;
   img.src = "rock.png";
   result.textContent = "You win! Paper beats Rock.";
- } else if (computerSelection == "rock" && playerSelection == "s") {
+ } else if (computerSelection == "rock" && playerSelection == "scissors") {
   message.classList.add("message");
   compImage.classList.add("compImage");
   compScore += 1;
   img.src = "rock.png";
   result.textContent = "You lose. Rock beats Scissors.";
- } else if (computerSelection == "scissors" && playerSelection == "r") {
+ } else if (computerSelection == "scissors" && playerSelection == "rock") {
   message.classList.add("message");
   compImage.classList.add("compImage");
   img.src = "scissors.png";
   myScore += 1;
   result.textContent = "You win! Rock beats Scissors.";
- } else if (computerSelection == "scissors" && playerSelection == "s") {
+ } else if (computerSelection == "scissors" && playerSelection == "scissors") {
   message.classList.add("message");
   compImage.classList.add("compImage");
   img.src = "scissors.png";
   result.textContent = "It's a tie, try again.";
- } else if (computerSelection == "scissors"  && playerSelection == "p") {
+ } else if (computerSelection == "scissors"  && playerSelection == "paper") {
   message.classList.add("message");
   compImage.classList.add("compImage");
   compScore += 1;
   img.src = "scissors.png";
   result.textContent = "You lose. Scissors beats Paper.";
- } else if (computerSelection == "paper" && playerSelection == "r") {
+ } else if (computerSelection == "paper" && playerSelection == "rock") {
   message.classList.add("message");
   compImage.classList.add("compImage");
   compScore += 1;
   img.src = "paper.png";
   result.textContent = "You lose. Paper beats Rock.";
- } else if (computerSelection == "paper" && playerSelection == "s") {
+ } else if (computerSelection == "paper" && playerSelection == "scissors") {
   message.classList.add("message");
   compImage.classList.add("compImage");
   myScore += 1;
@@ -118,9 +127,11 @@ function rps(playerSelection) {
 
 //testing whether or not the game is over
  if (myScore > 2) {
-  message.textContent = "You Win!"
+  message.textContent = "You Win!";
+  message.classList.add("green");
  } else if (compScore > 2) {
-  message.textContent = "You Lose."
+  message.textContent = "You Lose.";
+  message.classList.add("red");
  }
 }
 

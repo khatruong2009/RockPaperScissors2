@@ -5,6 +5,10 @@
 * Browsers: last 4 version
 */
 
+body {
+    margin: 0;
+}
+
 .header {
  display: -webkit-box;
  display: -ms-flexbox;
@@ -24,7 +28,7 @@
 }
 
 .buttons input {
- width: 200px;
+ width: 14%;
  -webkit-box-sizing: border-box;
          box-sizing: border-box;
  -webkit-transition: -webkit-transform .3s;
@@ -35,10 +39,25 @@
 }
 
 .buttons input:hover {
- border: black 5px solid;
  -webkit-transform: scale(1.1);
      -ms-transform: scale(1.1);
          transform: scale(1.1);
+}
+
+.player-label {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+
+.choice-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .result h2 {
@@ -51,8 +70,20 @@
  font-size: 25px;
 }
 
+.result-container {
+    display: flex;
+    justify-content: center;
+}
+
 #result {
  font-weight: bold;
+ padding: 1%;
+}
+
+.result-border {
+    border: 2px black solid;
+    border-radius: 10px;
+    width: 20%;
 }
 
 .message {
@@ -78,6 +109,7 @@
 
 .reset {
  text-align: center;
+ padding-bottom: 5%;
 }
 
 #reset {
@@ -88,10 +120,19 @@
  -o-transition: transform .3s;
  transition: transform .3s;
  transition: transform .3s, -webkit-transform .3s;
+ border-radius: 15px;
 }
 
 #reset:hover {
  -webkit-transform: scale(1.1);
      -ms-transform: scale(1.1);
          transform: scale(1.1);
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
 }

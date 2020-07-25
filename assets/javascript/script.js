@@ -33,6 +33,8 @@ reset.addEventListener("click", () => {
  message.classList.add("red");
  result.textContent = "";
  result.classList.remove("result-border");
+ pImage.src = "";
+ cImage.src = "";
 })
 
 //functions to start the game when the user clicks an image
@@ -72,55 +74,55 @@ function rps(playerSelection) {
 result.classList.add("result-border");
  if (computerSelection == "rock" && playerSelection == "rock") {
   message.classList.add("message");
-  compImage.classList.add("compImage");
-  img.src = "rock.png";
   result.textContent = "It's a tie, try again.";
+  cImage.src = "images/rock.png";
+  pImage.src = "images/rock.png";
  } else if (computerSelection == "rock" && playerSelection == "paper") {
   message.classList.add("message");
-  compImage.classList.add("compImage");
   myScore += 1;
-  img.src = "rock.png";
   result.textContent = "You win! Paper beats Rock.";
+  cImage.src = "images/rock.png";
+  pImage.src = "images/paper.png";
  } else if (computerSelection == "rock" && playerSelection == "scissors") {
   message.classList.add("message");
-  compImage.classList.add("compImage");
   compScore += 1;
-  img.src = "rock.png";
   result.textContent = "You lose. Rock beats Scissors.";
+  cImage.src = "images/rock.png";
+  pImage.src = "images/scissors.png";
  } else if (computerSelection == "scissors" && playerSelection == "rock") {
   message.classList.add("message");
-  compImage.classList.add("compImage");
-  img.src = "scissors.png";
   myScore += 1;
   result.textContent = "You win! Rock beats Scissors.";
+  cImage.src = "images/scissors.png";
+  pImage.src = "images/rock.png";
  } else if (computerSelection == "scissors" && playerSelection == "scissors") {
   message.classList.add("message");
-  compImage.classList.add("compImage");
-  img.src = "scissors.png";
   result.textContent = "It's a tie, try again.";
+  cImage.src = "images/scissors.png";
+  pImage.src = "images/scissors.png";
  } else if (computerSelection == "scissors"  && playerSelection == "paper") {
   message.classList.add("message");
-  compImage.classList.add("compImage");
   compScore += 1;
-  img.src = "scissors.png";
   result.textContent = "You lose. Scissors beats Paper.";
+  cImage.src = "images/scissors.png";
+  pImage.src = "images/paper.png";
  } else if (computerSelection == "paper" && playerSelection == "rock") {
   message.classList.add("message");
-  compImage.classList.add("compImage");
   compScore += 1;
-  img.src = "paper.png";
   result.textContent = "You lose. Paper beats Rock.";
+  cImage.src = "images/paper.png";
+  pImage.src = "images/rock.png";
  } else if (computerSelection == "paper" && playerSelection == "scissors") {
   message.classList.add("message");
-  compImage.classList.add("compImage");
   myScore += 1;
-  img.src = "paper.png";
   result.textContent = "You win! Scissors beats Paper.";
+  cImage.src = "images/paper.png";
+  pImage.src = "images/scissors.png";
  } else {
   message.classList.add("message");
-  compImage.classList.add("compImage");
-  img.src = "paper.png";
   result.textContent = "It's a tie, try again.";
+  cImage.src = "images/paper.png";
+  pImage.src = "images/paper.png";
 }
 
 //function to display the score

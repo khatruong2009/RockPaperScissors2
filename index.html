@@ -9,25 +9,7 @@
 </head>
 
 <body>
- <!-- rock paper scissors label -->
- <div class="header"> 
-  <h1>Rock</h1>
-  <h1>Paper</h1>
-  <h1>Scissors</h1>
- </div>
-
- <!-- the image buttons -->
- <div class="buttons">
-  <input id="rock" type="image" src="images/rock.png">
-  <input id="paper" type="image" src="images/paper.png">
-  <input id="scissors" type="image" src="images/scissors.png">
- </div>
-
  <div class="result">
-  
-   <div id="compImage" class="">
-    <img id="img" src="" alt="">
-   </div>
 
    <div class="player-label">
     <h3>Player:</h3>
@@ -35,8 +17,8 @@
    </div>
 
    <div class="choice-image">
-     <i id="pImage"></i>
-     <i id="cImage"></i>
+     <img id="pImage" src="" alt="">
+     <img id="cImage" src="" alt="">
    </div>
 
    <div class="choice-container">
@@ -54,11 +36,19 @@
    
    <p id="message" class=""></p>
 
+   <div class="buttons">
+    <input id="rock" type="image" src="images/rock.png">
+    <input id="paper" type="image" src="images/paper.png">
+    <input id="scissors" type="image" src="images/scissors.png">
+   </div>
+
    <div class="reset">
     <button id="reset">Reset</button>
    </div>
 
  </div>
+
+
 
 
 </body>

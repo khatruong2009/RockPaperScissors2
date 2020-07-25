@@ -55,6 +55,16 @@ body {
     justify-content: space-evenly;
 }
 
+#pImage {
+ width: 7%;
+ height: auto;
+}
+
+#cImage {
+    width: 7%;
+    height: auto;
+   }
+
 .choice-container {
     display: flex;
     justify-content: space-evenly;
@@ -115,6 +125,7 @@ body {
 .reset {
  text-align: center;
  padding-bottom: 5%;
+ padding-top: 5%;
 }
 
 #reset {
@@ -125,6 +136,7 @@ body {
  -o-transition: transform .3s;
  transition: transform .3s;
  transition: transform .3s, -webkit-transform .3s;
+ border: 1px black solid;
  border-radius: 15px;
 }
 

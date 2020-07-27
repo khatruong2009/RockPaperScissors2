@@ -24,8 +24,6 @@ let reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
  myScore = 0;
  compScore = 0;
- cChoice.textContent = "";
- pChoice.textContent = "";
  pScore.textContent = ("Your Score: " + myScore);
  cScore.textContent = ("Computer Score: " + compScore);
  message.textContent = "";
@@ -69,8 +67,6 @@ function computerPlay() {
 //function to play rock paper scissors
 function rps(playerSelection) {
  computerSelection = computerPlay();
- cChoice.textContent = ("The computer chose " + computerSelection + ".");
- pChoice.textContent = ("The player chose " + playerSelection + ".");
 result.classList.add("result-border");
  if (computerSelection == "rock" && playerSelection == "rock") {
   message.classList.add("message");
